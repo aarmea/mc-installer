@@ -36,9 +36,7 @@ apps:
       - opengl
       - audio-playback
       - browser-support
-      - home
       - dot-minecraft   
-      - removable-media
     environment:
       PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.8/site-packages
       JAVA_HOME: $SNAP/usr/lib/jvm/java-17-openjdk-amd64/
