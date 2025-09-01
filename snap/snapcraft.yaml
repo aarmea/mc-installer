@@ -1,5 +1,6 @@
 name: mc-installer
 title: Minecraft Installer
+version: 0.1.0
 adopt-info: launcher
 summary: A simple installer for Minecraft - Java Edition
 description: | 
@@ -36,7 +37,7 @@ apps:
       - opengl
       - audio-playback
       - browser-support
-      - dot-minecraft   
+      - dot-minecraft
     environment:
       PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.8/site-packages
       JAVA_HOME: $SNAP/usr/lib/jvm/java-17-openjdk-amd64/
@@ -46,10 +47,6 @@ parts:
   launcher:
     plugin: dump
     source: scripts
-    
-    override-pull: |
-      craftctl default
-      craftctl set version="$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)"
        
   game:
     plugin: nil
